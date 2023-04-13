@@ -114,7 +114,8 @@ export default function CreateListing() {
               case "running":
                 console.log("Upload is running");
                 break;
-            }
+              default: 
+              }
           },
           (error) => {
             // Handle unsuccessful uploads
@@ -143,6 +144,7 @@ export default function CreateListing() {
           ...formData,
           imgUrls,
           timeStamp: serverTimestamp(),
+          userRef: auth.currentUser.uid,
         } 
         delete formDataCopy.images;
         !formDataCopy.offer && delete formDataCopy.discountedPrice
