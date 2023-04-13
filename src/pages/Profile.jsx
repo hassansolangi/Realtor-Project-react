@@ -23,8 +23,8 @@ export default function Profile() {
 
   function onChange(e){
     setFormData((prevState)=>({
-    ...prevState,
-    [e.target.id]: e.target.value,
+      ...prevState,
+      [e.target.id]: e.target.value,
     }));  
   }
 
